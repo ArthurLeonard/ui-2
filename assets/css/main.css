@@ -82,20 +82,8 @@ blockquote, q {
 				color: #000000;
 			}
 		
-		em, i {
-				font-style: italic;
-			}
+	
 		
-			p, .abouttext {
-				font-size: 1.6rem;
-				font-weight: 450;
-				margin: 0;
-				padding: 4% 8%;
-			}
-
-			li {
-				padding: 0 8%;
-			}
 		
 			h1, h2, h3, h4, h5, h6 {
 				color: white;
@@ -116,7 +104,7 @@ blockquote, q {
 		
 			h1 {
 				font-family: "Source Sans Pro", Helvetica, sans-serif;
-				font-size: 8rem;
+				font-size: 5rem;
 				font-weight: 700;
 				letter-spacing: -0.05em;
 				line-height: 1.1;
@@ -124,13 +112,26 @@ blockquote, q {
 				text-transform: none;
 			}
 		
+			@media (min-width: 1000px) {
+				h1 {
+				  font-size: 7rem;
+				}
+			  }
 			
 			h2 {
-				font-size: 2rem;
+				font-size: 1.5rem;
+				/* font-style: italic; */
 				/* border: solid black; */
-				font-weight: 300;
+				
 				vertical-align: baseline;
 			}
+
+			@media (min-width: 1000px) {
+				h2 {
+				  font-size: 2rem;
+				  font-weight: 300;
+				}
+			  }
 		
 			h3 {
 				font-size: 1.6rem;
@@ -149,9 +150,19 @@ blockquote, q {
 				font-size: 0.625rem;
 			}
 		
+			p, .abouttext {
+				font-size: 1.5rem;
+				font-weight: 450;
+				/* margin-top: 5rem; */
+				padding: 3% 8% 2% 8%;
+				border: 3p dotted black;
+			}
 		
-		
-		
+			@media (min-width: 1000px) {
+				p {
+				  font-size: 1.5rem;
+				}
+			  }
 		
 		/* Arrow */
 		
@@ -185,10 +196,11 @@ blockquote, q {
 		header {
 		  display: flex; 
 		  flex-direction: column;
-		  justify-content: center;
-		  /* align-items: center;  */
+		  justify-content: center; */
+		  /* align-items: center; 
 		  border: 3px dotted black;
 		  /* text-align: right;  */
+		  height: 90rem;
 		  
 		  
 		}
@@ -205,24 +217,43 @@ blockquote, q {
 			padding: 0;
 		}
 
+
+
+		section {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+		}
+		
+		@media (min-width: 1000px) {
+			section {
+			  flex-direction: row;
+			  height: 25rem;
+			}
+		  }
+
 		.left, .header-text {
+		  display: flex;
+		  flex-direction: column;
+		  justify-content: center;
 		  width: 100%;
 		  height: 8rem;
 		  /* border: 5px dotted purple; */
 		  background:  #442587;
 		  color: white;
 		  text-align: center; 
-		  padding: 2rem 0 0 0;	
+		  padding: 0 5rem 0 0;	 
 		}
 
 		.header-text {
-			height: 30rem;
+			height: 50rem;
+			padding: 0;
 		 }
 
 
 		 @media (min-width: 1000px) {
 			.header-text {
-			  width: 48%;
+			  width: 50%;
 			  height: 100%;
 			  padding: 10% 5% 20% 0; 
 			  text-align: end; 
@@ -233,25 +264,40 @@ blockquote, q {
 			.left {
 			  width: 50%;
 			  height: 100%;
-			  padding: 10% 5% 20% 0; 
+			  /* padding: 10% 5% 20% 0;  */
 			  text-align: end; 
 			}
 		  }
 		
-		.header-img, .right {
+		.right {
+		 display: flex;
+		 flex-direction: column;
+		 justify-content: center;
 		  width: 100%;
-		  height: 25rem;
+		  height: 100%;
+		  /* height: 25rem; */
 		  background: white;
 		  color: black;
 		} 
 
+		.featureright {
+			
+		}
+
+		@media (min-width: 1000px) {
+			.featureright {
+			  margin-top: 8rem;
+			}
+		  }
+
 		.header-img {
-			height: 48rem;
+			height: 45rem;
+			margin-top: 0;
 		}
 
 		@media (min-width: 1000px) {
 			.header-img {
-			  width: 49%;
+			  width: 50%;
 			  height: 100rem;
 			  border: solid red;
 			}
@@ -261,6 +307,7 @@ blockquote, q {
 			.right {
 			  width: 50%;
 			  height: 100%;
+			  height: 15rem;
 			}
 		  }
 
@@ -269,15 +316,13 @@ blockquote, q {
 			width: 100%;
 			height: 40rem;
 			/* border:6px solid blue; */
-			display:none; 
+			display: none; 
 		}
 
 		img {
 			object-fit: fill;
 			width: 100%;
-			/* display:none; */
-			
-			/* display:none; */
+			height: 100%;
 		}
 
 		@media (min-width: 1000px) {
@@ -292,53 +337,34 @@ blockquote, q {
 		}
 
 
-		@media (max-width: 500px) {
-			p {
-			  font-size: 1.3rem;
-			}
-		  }
-		section {
-			display: flex;
-			justify-content: space-between;
-			flex-direction: column;
-
-			
-			/* text-align: right; */
-			/* margin-bottom: 3%; */
-		}
-		
-		@media (min-width: 1000px) {
-			section {
-			  flex-direction: row;
-			  height: 25rem;
-			}
-		  }
-		
 		
 		.signin {
+
+			height: 100%;
+		}
+		
+		.input {
 		/*   display: none; */
-		 	display: flex; 
-			justify-content: space-between;
-			 flex-direction: column; 
-			align-items: space-between;
+		 	/* display: flex; 
+			justify-content: center;
+			flex-direction: column;  */
+			/* align-items: space-between; */
 			border: solid black;
 			
-			width: 100%;
-			/* //border: solid black; */
 		}
 
 		@media (min-width: 1000px) {
-			.signin {
+			.input {
 			  
-			  height: 25rem;
-			  margin: 8%; 
+			  /* height: 100%; */
+			  /* margin-top: 6%; */
 			}
 		  }
 
 
 		input, button{
-		  width: 160%;
-		  margin: 4% 15%;
+		  width: 80%;
+		  margin: 2% 10%;
 		  height: 5rem;
 		}
 
@@ -352,11 +378,11 @@ blockquote, q {
 		}
 		
 		button: hover {
-			background-color: black;
+			background: black;
 		  }
 		  
 		.links {
-			margin-top: 15rem;
+			/* margin-top: 15rem; */
 			position: relative;
 			background-image: url(https://i.ibb.co/6F281g8/writing.png);
 			z-index: 100;
