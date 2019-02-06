@@ -37,15 +37,10 @@ ol, ul {
 	list-style: none;
 }
 
-blockquote, q {
+/* blockquote, q {
 	quotes: none;
-}
+} */
 
-	.left:before, .left:after, q:before, q:after {
-		content: '';
-		content: none;
-		height: 75%;
-	}
 
 
 	html {
@@ -190,9 +185,21 @@ blockquote, q {
 					height: 8rem;
 					position: relative;
 					width: 5rem;
+					
+					animation: transform 0.7s 8;
+					animation-direction: alternate;
+					animation-delay: 5s;
 				}
 		
-		
+				@keyframes transform {
+					0% {
+						transform: translate(0, 0);    
+					}
+					100% {
+						transform: translate(0px, 7px);
+					}
+				}				
+
 
 		
 		header {
@@ -202,15 +209,20 @@ blockquote, q {
 		  /* align-items: center; 
 		  border: 3px dotted black;
 		  /* text-align: right;  */
-		  height: 90rem;
+			height: 90rem;
+			
+			
 		}
 
 		@media (min-width: 1000px) {
 			header {
 				flex-direction: row;
 				height: 110rem;
+				
 			}
-		  }
+		}
+
+		
 
 		  header::before {
 				height: 136%;
@@ -309,7 +321,21 @@ blockquote, q {
 		  background:  #442587;
 		  color: white;
 		  text-align: center; 
-		  padding: 0 20rem 0 0;	 
+			padding: 0 20rem 0 0;
+			
+			animation: pulse 7s infinite;
+			animation-delay: 0s;
+			animation-iteration-count: 1;
+		}
+
+
+		@keyframes pulse {
+			0% {
+				background-color: #001F3F;
+			}
+			100% {
+				background-color: #442587;
+			}
 		}
 
 		.left h2::after {
