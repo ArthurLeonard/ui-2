@@ -41,7 +41,7 @@ blockquote, q {
 	quotes: none;
 }
 
-	blockquote:before, blockquote:after, q:before, q:after {
+	.left:before, .left:after, q:before, q:after {
 		content: '';
 		content: none;
 		height: 75%;
@@ -54,11 +54,11 @@ blockquote, q {
 		font-size: 62.5%;
 		scroll-behavior: smooth;
 	}
-	
+ 	
 
-	*, *:before, *:after {
+	 *, *:before, *:after {
 		box-sizing: inherit;
-	}
+	} 
 
 	
 
@@ -155,7 +155,7 @@ blockquote, q {
 				font-weight: 450;
 				/* margin-top: 5rem; */
 				padding: 3% 8% 2% 8%;
-				border: 3p dotted black;
+				/* border: 3p dotted black; */
 			}
 		
 			@media (min-width: 1000px) {
@@ -169,7 +169,7 @@ blockquote, q {
 			a.arrow {
 				border-bottom: 0;
 				display: inline-block;
-				height: 4rem;
+				height: 8rem;
 				position: relative;
 				width: 6rem;
 			}
@@ -178,16 +178,18 @@ blockquote, q {
 					display: none;
 				}
 		
+
+				/* "data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512'%3E%3Cpath d='M442.53,346.28L293.65,495.16c-0.33,0.33-0.7,0.62-1.05,0.94c-9.16,9.77-22.15,15.9-36.6,15.9 c-14.44,0-27.43-6.13-36.59-15.88c-0.35-0.33-0.72-0.62-1.06-0.96L69.47,346.28c-19.62-19.62-19.62-51.44,0-71.05 c19.62-19.62,51.43-19.62,71.06,0l65.23,65.23V50.24C205.76,22.5,228.25,0,256,0s50.24,22.5,50.24,50.24v290.21l65.23-65.23 c19.62-19.62,51.43-19.62,71.05,0C462.15,294.84,462.15,326.66,442.53,346.28z' fill='%23000000' /%3E%3C/svg%3E" */
 				a.arrow:before {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512'%3E%3Cpath d='M442.53,346.28L293.65,495.16c-0.33,0.33-0.7,0.62-1.05,0.94c-9.16,9.77-22.15,15.9-36.6,15.9 c-14.44,0-27.43-6.13-36.59-15.88c-0.35-0.33-0.72-0.62-1.06-0.96L69.47,346.28c-19.62-19.62-19.62-51.44,0-71.05 c19.62-19.62,51.43-19.62,71.06,0l65.23,65.23V50.24C205.76,22.5,228.25,0,256,0s50.24,22.5,50.24,50.24v290.21l65.23-65.23 c19.62-19.62,51.43-19.62,71.05,0C462.15,294.84,462.15,326.66,442.53,346.28z' fill='%23000000' /%3E%3C/svg%3E");
+					background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/a3/Down_arrow.svg");
 					background-position: center;
 					background-repeat: no-repeat;
 					background-size: contain;
 					content: '';
-					display: inline-block;
-					height: 100%;
+					display: block;
+					height: 8rem;
 					position: relative;
-					width: 3rem;
+					width: 5rem;
 				}
 		
 		
@@ -201,16 +203,81 @@ blockquote, q {
 		  border: 3px dotted black;
 		  /* text-align: right;  */
 		  height: 90rem;
-		  
-		  
 		}
 
 		@media (min-width: 1000px) {
 			header {
 				flex-direction: row;
-				height: 100rem;
+				height: 110rem;
 			}
 		  }
+
+		  header::before {
+				height: 136%;
+				content: 'a';
+				width: 1px;
+				background: white;
+				display: block;
+				position: absolute;
+				left: 45%;
+				top: 461px;
+				z-index: 100;
+			}
+			
+		  header::after {
+				height: 800px;
+				width: 1px;
+				content: '';
+				background: white;
+				display: block;
+				position: absolute;
+				left: 45%;
+				margin-top: 550px;
+				top: 615px;
+				z-index: 100;
+		}
+
+		
+		header .header-text h1{
+
+		}	
+		
+		@media (min-width: 1000px){
+			header .header-text h1{
+				margin-top: 0%;
+				height: 150px;
+			}
+
+		}
+
+		header .header-text h1::before, .left h2::before {
+			height: 8px;
+			width: 8px;
+			border-radius: 50%;
+			content: '';
+			background: white;
+			display: block;
+			position: absolute;
+			left: 41%;
+			margin-top: 0%;
+			top: 458px;
+		}	
+
+
+		header .header-text h1::after, .left h2::after  {
+			height: 1px;
+			content: '';
+			width: 4%;
+			background: white;
+			display: block;
+			position: absolute;
+			left: 41%;
+			margin-top: 0%;
+			top: 461px;
+		}
+		
+
+
 		
 		.headerp {
 			font-size: 2.5rem;
@@ -242,7 +309,51 @@ blockquote, q {
 		  background:  #442587;
 		  color: white;
 		  text-align: center; 
-		  padding: 0 5rem 0 0;	 
+		  padding: 0 20rem 0 0;	 
+		}
+
+		.left h2::after {
+			left: 41%;
+			width: 4%;
+			/* height: 2px; */
+		}
+
+		.left h2::before{
+			left: 41%;
+		}
+
+		.start .left h2::before {
+			top: 1214px;
+		}
+
+		.start .left h2::after {
+			top: 1217px;
+		}
+
+		.feature1 .left h2::before {
+			top: 1463px;
+		}
+
+		.feature1 .left h2::after {
+			top: 1466px;
+		}
+
+		.feature2 .left h2::before {
+			top: 1713px;
+		}
+
+		.feature2 .left h2::after {
+			top: 1716px;
+		}
+
+		.contact .left h2::before {
+			top: 1963px;
+		}
+
+		.contact .left h2::after {
+			
+			top: 1966px;
+
 		}
 
 		.header-text {
@@ -255,7 +366,7 @@ blockquote, q {
 			.header-text {
 			  width: 50%;
 			  height: 100%;
-			  padding: 10% 5% 20% 0; 
+			  padding: 0 10% 0 0; 
 			  text-align: end; 
 			}
 		  } 
@@ -293,13 +404,14 @@ blockquote, q {
 		.header-img {
 			height: 45rem;
 			margin-top: 0;
+			overflow: hidden;
 		}
 
 		@media (min-width: 1000px) {
 			.header-img {
 			  width: 50%;
-			  height: 100rem;
-			  border: solid red;
+			  height: 110rem;
+			  /* border: solid red; */
 			}
 		  }
 
@@ -319,7 +431,7 @@ blockquote, q {
 			display: none; 
 		}
 
-		img {
+		.header-img img {
 			object-fit: fill;
 			width: 100%;
 			height: 100%;
@@ -349,7 +461,7 @@ blockquote, q {
 			justify-content: center;
 			flex-direction: column;  */
 			/* align-items: space-between; */
-			border: solid black;
+			/* border: solid black; */
 			
 		}
 
@@ -377,13 +489,15 @@ blockquote, q {
 		  border-radius: 8px;
 		}
 		
-		button: hover {
-			background: black;
+		button:hover {
+			color: #442587;
+			background: rgb(240, 240, 240);
+			
 		  }
 		  
 		.links {
-			/* margin-top: 15rem; */
-			position: relative;
+			width: 100%;
+			position: absolute;
 			background-image: url(https://i.ibb.co/6F281g8/writing.png);
 			z-index: 100;
 		}  
