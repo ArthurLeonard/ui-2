@@ -186,11 +186,17 @@ ol, ul {
 					position: relative;
 					width: 5rem;
 					
-					animation: transform 0.7s 8;
+					animation: transform 0.5s 8;
 					animation-direction: alternate;
-					animation-delay: 5s;
+					animation-delay: 3s;
 				}
 		
+				a.arrow:hover {
+					animation: scale .5s infinite;
+					animation-direction: alternate;
+					/* display:none; */
+				}
+				
 				@keyframes transform {
 					0% {
 						transform: translate(0, 0);    
@@ -323,7 +329,7 @@ ol, ul {
 		  text-align: center; 
 			padding: 0 20rem 0 0;
 			
-			animation: pulse 7s infinite;
+			animation: pulse 4.5s infinite;
 			animation-delay: 0s;
 			animation-iteration-count: 1;
 		}
@@ -493,12 +499,14 @@ ol, ul {
 
 		@media (min-width: 1000px) {
 			.input {
-			  
+				/* font-size: 7rem; */
+				/* display: none; */
 			  /* height: 100%; */
 			  /* margin-top: 6%; */
 			}
 		  }
 
+		
 
 		input, button{
 		  width: 80%;
@@ -518,8 +526,20 @@ ol, ul {
 		button:hover {
 			color: #442587;
 			background: rgb(240, 240, 240);
+			animation: scale .5s infinite;
+			animation-direction: alternate;
+		}
+		
+		@keyframes scale {
+			0% {
+				transform: scale(1, 1);    
+			}
+			100% {
+				transform: scale(1.03, 1.03);
+			}
+		}
 			
-		  }
+		  
 		  
 		.links {
 			width: 100%;
