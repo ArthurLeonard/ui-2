@@ -188,7 +188,7 @@ ol, ul {
 					
 					animation: transform 0.5s 8;
 					animation-direction: alternate;
-					animation-delay: 3s;
+					animation-delay: 2.5s;
 				}
 		
 				a.arrow:hover {
@@ -228,7 +228,9 @@ ol, ul {
 			}
 		}
 
-		
+		header::before {	}
+
+		@media (min-width: 1000px) {
 
 		  header::before {
 				height: 136%;
@@ -241,7 +243,12 @@ ol, ul {
 				top: 461px;
 				z-index: 100;
 			}
+		}
 			
+		header::after {	}
+
+		@media (min-width: 1000px) {
+
 		  header::after {
 				height: 800px;
 				width: 1px;
@@ -253,6 +260,7 @@ ol, ul {
 				margin-top: 550px;
 				top: 615px;
 				z-index: 100;
+			}
 		}
 
 		
@@ -268,6 +276,10 @@ ol, ul {
 
 		}
 
+		header .header-text h1::before, .left h2::before {	}
+
+		@media (min-width: 1000px) {
+
 		header .header-text h1::before, .left h2::before {
 			height: 8px;
 			width: 8px;
@@ -279,8 +291,12 @@ ol, ul {
 			left: 41%;
 			margin-top: 0%;
 			top: 458px;
-		}	
+			}	
+		}
 
+		header .header-text h1::after, .left h2::after  {	}
+		
+		@media (min-width: 1000px) {
 
 		header .header-text h1::after, .left h2::after  {
 			height: 1px;
@@ -293,7 +309,7 @@ ol, ul {
 			margin-top: 0%;
 			top: 461px;
 		}
-		
+	}
 
 
 		
@@ -499,7 +515,7 @@ ol, ul {
 
 		@media (min-width: 1000px) {
 			.input {
-				/* font-size: 7rem; */
+				  font-weight: 700;
 				/* display: none; */
 			  /* height: 100%; */
 			  /* margin-top: 6%; */
@@ -526,7 +542,7 @@ ol, ul {
 		button:hover {
 			color: #442587;
 			background: rgb(240, 240, 240);
-			animation: scale .5s infinite;
+			animation: scale .3s infinite;
 			animation-direction: alternate;
 		}
 		
