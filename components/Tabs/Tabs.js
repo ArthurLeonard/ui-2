@@ -31,6 +31,7 @@ class TabLink {
             // add active-tab attribute to current tab
         this.link.classList.add('active-tab');
 
+            // invoke selectItem method of TabItem class which which selects the proper text to display for each tab
         this.tabItem.selectItem();
 
 
@@ -65,3 +66,41 @@ const tabs = document.querySelectorAll('.tab');
 
     // turn each tab into a TabLink component
 tabs.forEach( tb => new TabLink(tb));
+
+
+const contact = document.querySelector('.contact');
+contact.addEventListener("click", function(){ alert("Suggestions? We would love to hear from you!"); });
+
+
+
+
+// Function to change the text content of the h2's
+function modifyText() {
+    
+        // change h2 texts on the left
+    var lefts = document.querySelectorAll(".h2-class");
+
+    var result = Array.from(lefts).filter(left => left.textContent == "Preserve Memories");
+    console.log(result[0].textContent);
+    result[0].textContent = "Travel Back to Special Moments";
+
+    var result = Array.from(lefts).filter(left => left.textContent == "Access Your Journal From Anywhere");
+    console.log(result[0].textContent);
+    result[0].textContent = "On The Train or At Your Home";
+
+    var result = Array.from(lefts).filter(left => left.textContent == "Easy to Use Interface");
+    console.log(result[0].textContent);
+    result[0].textContent = "Access and Edit Your Entries Easily";
+
+    var result = Array.from(lefts).filter(left => left.textContent == "Start Your Journal");
+    console.log(result[0].textContent);
+    result[0].textContent = "Life is a journey. record it.";
+
+    var result = Array.from(lefts).filter(left => left.textContent == "Contact Us");
+    result[0].textContent = "Questions? Comments? We want to hear from you";
+
+  }
+  
+    // Trigger text change when title section is clicked
+  var el = document.querySelectorAll(".left");
+  el.forEach(element => element.addEventListener("click", modifyText) );
