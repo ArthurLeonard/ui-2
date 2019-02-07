@@ -13,6 +13,7 @@
 		<meta name="keywords" content="" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<script defer="defer" src="./components/Tabs/Tabs.js"></script>
+		<script defer="defer" src="./components/slides/slides.js"></script>
 	</head>
 	<!DOCTYPE HTML>
 
@@ -35,56 +36,123 @@
               
 		<div class="header-img" class = "right">
 				
+			
 			<img class = "journal" src="./images/journal.jpg" alt="Hand writing">
 			
 		</div>
 					
 	</header>
 
+	<section class = "gif-buffer-section">
 
+		<div class = "left-buffer"></div>
+		<div class = "memories-heading">	<h3>Make your memories live with one line a day</h3> </div>
 
-	<!-- Section -->
-	<section id="start" class = "start">
-		<div class = "left">
-			<h2>Start Here</h2>
-		</div>
-	
-		<div class="right">
-			<form action="#" class = "signin">
-				<div class = "input">
-				<input type="text" id = "name" placeholder = "Your Name">  
-				<input type="email" id = "email" placeholder = "Your Email">  
-				<button type = "submit">Sign in! </button>
-			  </div>
-		  </form>
-		</div>
 	</section>
+	<section id = "memories" class = "memories">
 
-	<!-- Section -->
+		<div class = "left"><h2>Preserve Memories</h2> </div>
+
+		<div class="right featureright">
+
+			<img class = "memories-img" src="./images/memories.gif" alt="memories">
+		</div>
+
+	</section>
+	
+
+	<!-- Section Feature 1-->
 	<section id = "feature1" class = "feature1">
+		
 		<div class = "left">
 			<h2>Feature 1</h2>
 		</div>
 			
 		<div class="right featureright">
-			<p><strong>Etiam tristique libero</strong> eu nibh porttitor amet fermentum. Nullam venenatis erat id vehicula ultrices sed ultricies condimentum.</p>
-				
-			<p>Vehicula ultrices sed ultricies condimentum. Magna sed etiam consequat, et lorem adipiscing sed nulla. Volutpat nisl et tempus et dolor libero, feugiat magna tempus, sed et lorem adipiscing.</p>
+			
+			<h3>Organize your memories with One Line a Day</h3>
+			
+			<!-- TABS -->
+			<div class="tabs">
+				<div class="tab-links">
+				  
+				  <div class="tab active-tab" data-tab="1">Write</div>
+				  <div class="tab" data-tab="2">Review</div>
+				  <div class="tab" data-tab="3">Edit</div>
+				  <div class="tab" data-tab="4">Delete</div>
+				</div>
+			</div>
+	
+			<div class="tabs-content">
+				<div  data-tab="1" class="tab-item selected-item">
+					<p>Use our app to enter thoughts from your day. Jot down an idea, something you read, an insight or experience you had and catalog your memories </p>
+				</div>
+				<div  data-tab="2"class="tab-item">
+					<p>Browse through your daily notes or search for a specific date.</p>
+				</div>
+				<div data-tab="3" class="tab-item">
+					<p>Change previous entries.</p>
+				</div>
+				<div data-tab="4" class="tab-item">
+					<p>Delete any entries you don't like.</p>
+				</div>
+			</div>
+		
 		</div>
-	</section>
+
+
+	</section> <!-- end feature1 section-->
 
 	<!-- Section -->
 	<section id = "feature2" class = "feature2">
+		
 		<div class = "left">
 			<h2>Feature 2</h2>
 		</div>
 
 		<div class="right featureright">
-			<p><strong>Integer mollis egestas</strong> nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
+
+
+			<!-- <h3><strong>Use on your computer or your phone</strong></h3> -->
+
+
+			
+					<button class="left-button slideshow-button">&#10094;</button>
+					<button class="right-button slideshow-button">&#10095;</button>
+				
+				<!-- <div class = "image-cover"> -->
+				<div class="slideshow">
+
+					 <img class="mySlides active-slide" data-slides = "0" src="./images/desktopview.png">
+					 <img class="mySlides" data-slides = "1" src="./images/mobileview.png">
+					 <img class="mySlides" data-slides = "2" src="./images/desktopandmobile.png" >
+					 
+				
+				<!-- </div> -->
+				</div>
+
 		</div>	
-	</section>
+	</section> <!-- end feature2 section -->
+
+
+	<!-- Section Start Here -->
+	<section id="start" class = "start">
+			<div class = "left">
+				<h2>Start Here</h2>
+			</div>
+		
+			<div class="right">
+				<form action="#" class = "signin">
+					<div class = "input">
+						<div>	<input type="text" id = "name" placeholder = "Your Name">  </div>
+						<div>	<input type="email" id = "email" placeholder = "Your Email"> </div> 
+						<div>	<button type = "submit">Sign in! </button>  </div>
+				  </div>
+			  </form>
+			</div>
+	</section> <!-- end Start Here section -->
             
-	<!-- Section -->
+	<!-- Section Contact-->
 	<section id = "about" class = "contact">
 		<div class = "left">
 			<h2>Contact</h2>
@@ -104,7 +172,7 @@
 			</div>
 		
 		</div>
-	</section>
+	</section><!-- end Contact section -->
 
 	
             
@@ -134,47 +202,14 @@
 						</footer>
 					</section>
 
-				<!-- Copyright -->
-					<div class="copyright">&copy; Untitled. All rights reserved.</a>.</div>
+				
 
 			</div>
 
 
 
-
-		<!-- TABS COMPONENT -->
-		<div class="tabs">
-			<div class="tab-links">
-			  
-			  <div class="tab active-tab" data-tab="1">Write</div>
-			  <div class="tab" data-tab="2">Review</div>
-			  <div class="tab" data-tab="3">Edit</div>
-			  <div class="tab" data-tab="4">Delete</div>
-			</div>
-		</div>
-
-		<div class="tabs-content">
-			<div  data-tab="1" class="tab-item selected-item">
-				<p>Use our app to enter thoughts from your day. Jot down an idea, something you read, an insight or experience you had and catalog your memories </p>
-			</div>
-			<div  data-tab="2"class="tab-item">
-				<p>Browse through your daily notes or search for a specific date.</p>
-			</div>
-			<div data-tab="3" class="tab-item">
-				<p>Change previous entries.</p>
-			</div>
-			<div data-tab="4" class="tab-item">
-				<p>Delete any entries you don't like.</p>
-			</div>
-		</div>
-
-		<!-- Scripts -->
-			<!-- <script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script> -->
+		<!-- Copyright -->
+		<div class="copyright"><h2>Untitled. All rights reserved.</h2></div>
 
 	</body>
 </html>
