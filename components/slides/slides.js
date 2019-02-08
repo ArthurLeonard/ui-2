@@ -1,5 +1,9 @@
 
 
+  /*********************************************************************************************************** */
+ /*      SLIDES.JS : uses components to create an image carousel that can handle any number of images         */
+/*********************************************************************************************************** */
+
 
 class Rbutton {
 
@@ -7,8 +11,19 @@ class Rbutton {
         this.button = button;
 
         this.button.addEventListener('click', () => this.setActive() );
+        this.button.addEventListener('mouseover', () => this.setActive() );
+
+        this.button.addEventListener('mouseover', () => this.setBackGround( "pink"  ) );
+        this.button.addEventListener('mouseout', () => this.setBackGround( "lightgray" ) );
     } // end constructor
 
+        // simply sets the background since :hover is being an SOB
+    setBackGround(coloor) {
+        this.button.style.background = coloor;
+        this.button.style.opacity = 0.5;
+    }
+
+        // removes active-slide attribute from last image and places it on next one
     setActive() {
 
         console.log(`Right arrow button was clicked`);
@@ -42,7 +57,18 @@ class Lbutton {
         this.button = button;
 
         this.button.addEventListener('click', () => this.setActive() );
+        this.button.addEventListener('mouseover', () => this.setActive() );
+
+        this.button.addEventListener('mouseover', () => this.setBackGround( "pink"  ) );
+        this.button.addEventListener('mouseout', () => this.setBackGround( "lightgray" ) );
     } // end constructor
+
+        // simply sets the background since :hover is being an SOB
+    setBackGround(coloor) {
+        this.button.style.background = coloor;
+        this.button.style.opacity = 0.5;
+    }
+    
 
     setActive() {
 
