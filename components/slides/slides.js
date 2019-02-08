@@ -1,8 +1,12 @@
 
 
-  /*********************************************************************************************************** */
- /*      SLIDES.JS : uses components to create an image carousel that can handle any number of images         */
+     /*********************************************************************************************************** */
+    /*      SLIDES.JS : uses components to create an image carousel that can handle any number of images         */
+   /*       Avoids having to layer two classes by making classes for the buttons instead of the images          */ 
+  /*        but makes up for this efficiency by effectively doubling the code by using separate classes        */
+ /*        for the left and right buttons needlessly.                                                         */                                                    */      
 /*********************************************************************************************************** */
+
 
 
 class Rbutton {
@@ -26,22 +30,18 @@ class Rbutton {
         // removes active-slide attribute from last image and places it on next one
     setActive() {
 
-        console.log(`Right arrow button was clicked`);
-
+            // store references to currently active image and an array of all images
         const activeslide = document.querySelector('.active-slide');
         const allslides = Array.from(document.querySelectorAll('.mySlides' ) );
 
-        console.log(`Active slide is ${activeslide.dataset.slides}`);
         activeslide.classList.remove('active-slide');
-        activeslide.classList.add('.amina');
-        console.log(`class list of ${activeslide.dataset.slides} is ${activeslide.classList}`);
 
+            // find next image and make it active
         for (let i = 0; i < allslides.length; i++) {
 
             if ( (parseInt(activeslide.dataset.slides) + 1) % allslides.length == allslides[i].dataset.slides ) {
-            console.log('boo');
-            allslides[i].classList.add('active-slide');
-            }
+                 allslides[i].classList.add('active-slide');
+            } // endif
 
         } // endfor
 
@@ -69,23 +69,19 @@ class Lbutton {
         this.button.style.opacity = 0.5;
     }
     
-
+        // removes active-slide attribute from last image and places it on next one
     setActive() {
-
-        console.log(`Left arrow button was clicked`);
-
+            // store references to currently active image and an array of all images
         const activeslide = document.querySelector('.active-slide');
         const allslides = Array.from(document.querySelectorAll('.mySlides' ) );
 
-        console.log(`Active slide is ${activeslide.dataset.slides}`);
         activeslide.classList.remove('active-slide');
-        console.log(`class list of ${activeslide.dataset.slides} is ${activeslide.classList}`);
-        console.log(-1%4);
+
+            // Same as before. should have had one class handle left and right clicks and have setActive() take an argument of -1 or 1
         for (let i = 0; i < allslides.length; i++) {
 
             if ( (parseInt(activeslide.dataset.slides) + allslides.length -1) % allslides.length == allslides[i].dataset.slides ) {
-            console.log('boo');
-            allslides[i].classList.add('active-slide');
+                allslides[i].classList.add('active-slide');
             }
 
         } // endfor
