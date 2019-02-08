@@ -4,7 +4,7 @@
     /*      SLIDES.JS : uses components to create an image carousel that can handle any number of images         */
    /*       Avoids having to layer two classes by making classes for the buttons instead of the images          */ 
   /*        but makes up for this efficiency by effectively doubling the code by using separate classes        */
- /*        for the left and right buttons needlessly.                                                         */                                                    */      
+ /*        for the left and right buttons needlessly.                                                         */             
 /*********************************************************************************************************** */
 
 

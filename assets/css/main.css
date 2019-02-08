@@ -215,7 +215,7 @@ footer, header, hgroup, menu, nav, section {
 		header {
 		  display: flex; 
 		  flex-direction: column;
-		  justify-content: center; */
+		  justify-content: center; 
 		  /* align-items: center; 
 		  border: 3px dotted black;
 		  /* text-align: right;  */
@@ -683,11 +683,11 @@ footer, header, hgroup, menu, nav, section {
 
 		}
 
-		.slideshow-buttons:hover {
-			background: pink:
+		/* .slideshow-buttons:hover {
+			background: pink;
 			animation: scale .5s infinite;
 			animation-direction: alternate;
-		} 
+		}  */
 
 		@media (min-width: 800px) {
 			.slideshow-button {

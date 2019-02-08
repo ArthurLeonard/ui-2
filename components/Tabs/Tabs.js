@@ -104,19 +104,19 @@ function modifyText() {
     var lefts = document.querySelectorAll(".h2-class");
 
     var result = Array.from(lefts).filter(left => left.textContent.includes("Preserve Memories"));
-    result[0].textContent = `Travel Back in Time`;
+    result[0].textContent = `Travel Back in Time---`;
 
     var result = Array.from(lefts).filter(left => left.textContent.includes("Access Your Journal From Anywhere") );
-    result[0].textContent = "On The Train or At Home";
+    result[0].textContent = "On The Train or At Home---";
 
     var result = Array.from(lefts).filter(left => left.textContent.includes("Easy to Use Interface") );
-    result[0].textContent = "Navigate entries easily";
+    result[0].textContent = "Navigate entries easily---";
 
     var result = Array.from(lefts).filter(left => left.textContent.includes("Start Your Journal") );
-    result[0].textContent = "Life is a journey. record it.";
+    result[0].textContent = "Life is a journey. record it.---";
 
     var result = Array.from(lefts).filter(left => left.textContent.includes("Contact Us") );
-    result[0].textContent = "Questions? Comments? We want to hear from you!";
+    result[0].textContent = "Questions? Comments? We want to hear from you!---";
     } //endif
 
     a++;        // Text change will happend only after all click links are sfollowed and then will only happen once
